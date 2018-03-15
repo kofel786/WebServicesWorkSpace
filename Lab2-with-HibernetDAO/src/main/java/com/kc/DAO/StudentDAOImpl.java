@@ -1,6 +1,7 @@
 package com.kc.DAO;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Session;
 
 import com.kc.DAO.StudentDAO;
@@ -12,11 +13,13 @@ import com.kc.hibernate.Student;
  * 
  */
 public class StudentDAOImpl  implements StudentDAO{
+	public static Logger log=Logger.getLogger(StudentDAOImpl.class.getName());
 
     /**
      * This method saves a Student object in database
      */
     public int saveStudent(String firstName, String lastName, String section) {
+    	log.info("saveStudent()");
         Student student = new Student();
         student.setFirstName(firstName);
         student.setLastName(lastName);
@@ -36,6 +39,7 @@ public class StudentDAOImpl  implements StudentDAO{
      * database
      */
     public List<Student> getAllStudents() {
+    	log.info("getAllStudents()");
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
  
@@ -52,6 +56,7 @@ public class StudentDAOImpl  implements StudentDAO{
      * This method returns list of all students name
      */
     public List<Student> getAllStudentsName() {
+    	log.info("getAllStudentsName()");
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
  
@@ -68,6 +73,7 @@ public class StudentDAOImpl  implements StudentDAO{
      * This method returns student info based on Id
      */
     public List<Student> getStudentsById(int id) {
+    	log.info("getStudentsById(int)");
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
  
@@ -83,6 +89,7 @@ public class StudentDAOImpl  implements StudentDAO{
      * This method updates a specific Student object by name
      */
     public void updateStudent(int id, String name) {
+    	log.info("updateStudent(int,String)");
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
  
@@ -97,6 +104,7 @@ public class StudentDAOImpl  implements StudentDAO{
      * This method deletes a specific Student based on Id
      */
     public void deleteStudent(int id) {
+    	log.info("deleteStudent(int)");
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
  

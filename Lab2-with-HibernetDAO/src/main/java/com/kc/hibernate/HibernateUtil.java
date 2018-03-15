@@ -1,5 +1,6 @@
 package com.kc.hibernate;
 
+import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
  
@@ -8,9 +9,10 @@ import org.hibernate.cfg.AnnotationConfiguration;
 public class HibernateUtil {
      
     private static final SessionFactory sessionFactory;
-     
+     private static Logger log=Logger.getLogger(HibernateUtil.class.getName());
     static{
         try{
+        	log.info("static block");
             sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
  
         }catch (Throwable ex) {
@@ -20,6 +22,7 @@ public class HibernateUtil {
     }
      
     public static SessionFactory getSessionFactory() {
+    	log.info("getSessionFactory");
         return sessionFactory;
     }
      

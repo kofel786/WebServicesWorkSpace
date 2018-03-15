@@ -8,10 +8,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.apache.log4j.Logger;
  
 @Entity
 @Table(name = "STUDENT")
 public class Student implements Serializable {
+	public static Logger log=Logger.getLogger(Student.class.getName());
+	public Student(){
+		log.info("Student Class instancated");
+	}
  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

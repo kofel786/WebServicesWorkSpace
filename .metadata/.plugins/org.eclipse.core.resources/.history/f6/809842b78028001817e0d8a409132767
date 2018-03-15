@@ -1,0 +1,37 @@
+package Java4s;
+
+import java.util.logging.Logger;
+
+public class Customer {
+	   static Logger log = Logger.getLogger(Customer.class.getName());
+
+	private int custNo;
+    private String custName;
+    private String custCountry;
+    
+    public Customer(){
+    	log.info( "Customer class instancatiead");
+
+    }
+    
+	public int getCustNo() {
+		return custNo;
+	}
+	public void setCustNo(int custNo) {
+		this.custNo = custNo;
+	}
+	public String getCustName() {
+		return custName;
+	}
+	public void setCustName(String custName) {
+		this.custName = custName;
+	}
+	public String getCustCountry() {
+		return custCountry;
+	}
+	public void setCustCountry(String custCountry) {
+		this.custCountry = custCountry;
+	}
+    
+    
+}

@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+E:\Kofel\GitWorkSpace\WebServicesWorkSpace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3223297268.index
+2729856908.index
+49279201.index
+2768476762.index
+2646181585.index
+1010810944.index
+3932300670.index

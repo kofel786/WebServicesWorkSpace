@@ -1,9 +1,21 @@
 package Java4s;
 
+import org.apache.log4j.Logger;
+
 public class Customer {
+	   static Logger log = Logger.getLogger(Customer.class.getName());
+
 	private int custNo;
     private String custName;
     private String custCountry;
+    
+    public Customer(){
+    	log.info( "Customer class instancatiead");
+    	log.info("This is info");
+    	log.error("this error");
+    	log.debug("This is debug");
+    	log.fatal("This is fatal");
+    }
     
 	public int getCustNo() {
 		return custNo;
