@@ -38,6 +38,7 @@ public class Customer {
     public void show(){
     	System.out.println("hello");
     	System.out.println("hello");
+    	System.out.println("hello");
     }
     
 }
