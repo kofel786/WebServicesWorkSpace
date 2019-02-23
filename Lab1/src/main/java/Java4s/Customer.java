@@ -35,6 +35,8 @@ public class Customer {
 	public void setCustCountry(String custCountry) {
 		this.custCountry = custCountry;
 	}
-    
+    public void show(){
+    	System.out.println("hello");
+    }
     
 }
